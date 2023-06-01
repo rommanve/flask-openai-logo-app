@@ -1,0 +1,1 @@
+A logos generator Python/Flask web app using the OpenAI capabilities.
