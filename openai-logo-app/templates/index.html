@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<head>
+  <title>OpenAI Logo Maker</title>
+  <link
+    rel="shortcut icon"
+    href="{{ url_for('static', filename='icon.jpg') }}"
+  />
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}" />
+</head>
+
+<body>
+  <img src="{{ url_for('static', filename='icon.jpg') }}" class="icon" />
+  <h3>Generate a Lettermark logo</h3>
+  <form action="/" method="post">
+    <input type="text" name="color" placeholder="Enter the logo color, e.g. dark gold" required />
+    <input type="text" name="text" placeholder="Enter the brand name, e.g. MyBrand" required />
+    <input type="text" name="number" placeholder="How many proposals, e.g. 1,2,3" required />
+    <input type="submit" value="GENERATE LOGO" />
+  </form>
+  {% if result %}
+  <div class="result">
+    {%for i in range(0, len)%}
+      <img src={{urls[i]}}>
+    {%endfor%}
+  </div>
+  {% endif %}
+</body>
