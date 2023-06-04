@@ -19,8 +19,8 @@
   </form>
   {% if result %}
   <div class="result">
-    {%for i in range(0, len)%}
-      <img src={{urls[i]}}>
+    {%for i in result['data']%}
+      <img src={{i['url']}}>
     {%endfor%}
   </div>
   {% endif %}
