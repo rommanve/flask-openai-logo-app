@@ -24,7 +24,8 @@ def openai_app():
 
 
 def generate_prompt(text, color):
-    return """Lettermark logo design with text \"{}\", {} color.""".format(text, color)
+    return "Modern, symmetrical, balanced, centered, professional looking, lettermark logo that incorporate the " \
+           "company name: \"{}\", {} color.".format(text, color)
 
 
 if __name__ == '__main__':
