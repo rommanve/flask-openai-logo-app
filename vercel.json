@@ -1,14 +1,14 @@
 {
   "builds": [
     {
-      "src": "flask-openai-logo-app/app.py",
+      "src": "openai-logo-app/app.py",
       "use": "@vercel/python"
     }
   ],
   "routes": [
     {
       "src": "/(.*)",
-      "dest": "flask-openai-logo-app/app.py"
+      "dest": "openai-logo-app/app.py"
     }
   ]
 }
