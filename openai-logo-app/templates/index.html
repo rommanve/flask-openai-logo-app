@@ -6,6 +6,12 @@
     href="{{ url_for('static', filename='icon.jpg') }}"
   />
   <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}" />
+  <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
+  <script type="text/javascript">
+    function loading(){
+      $(".loading").show();
+    }
+  </script>
 </head>
 
 <body>
@@ -15,7 +21,7 @@
     <input type="text" name="color" placeholder="Enter the logo color, e.g. dark gold" required />
     <input type="text" name="text" placeholder="Enter the brand name, e.g. MyBrand" required />
     <input type="text" name="number" placeholder="How many proposals, e.g. 1,2,3" required />
-    <input type="submit" value="GENERATE LOGO" />
+    <input type="submit" value="GENERATE LOGO" onclick="loading();" />
   </form>
   {% if result %}
   <div class="result">
@@ -24,4 +30,7 @@
     {%endfor%}
   </div>
   {% endif %}
+  <div class="loading">
+    <img src="{{ url_for('static', filename='loading.jpg') }}" width="35" height="35">
+  </div>
 </body>

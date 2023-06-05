@@ -68,9 +68,12 @@ input[type="submit"]:hover {
   margin-top: 40px;
   white-space: pre-wrap;
   white-space: -moz-pre-wrap;
-  white-space: -pre-wrap;
   white-space: -o-pre-wrap;
   word-wrap: break-word;
   display:flex;
   gap: 10px;
+}
+.loading {
+  margin-top: 12px;
+  display: none;
 }
