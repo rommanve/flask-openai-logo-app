@@ -14,7 +14,7 @@ def openai_app():
         number = request.form["number"]
         response = openai.Image.create(
             prompt=generate_prompt(text, color),
-            n=int(number),
+            n=min(int(number), 5),
             size="256x256"
         )
 
