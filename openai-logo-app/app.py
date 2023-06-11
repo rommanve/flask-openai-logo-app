@@ -24,7 +24,7 @@ def openai_app():
 
 
 def generate_prompt(text, color):
-    return "Modern, symmetrical, balanced, centered, professional looking, lettermark logo that incorporate the " \
+    return "Modern, symmetrical, balanced, centered, professional-looking, letter mark logo, incorporates the " \
            "company name: \"{}\", {} color.".format(text, color)
 
 
